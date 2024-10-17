@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Biblioteca de ícones</h2>
+  <div class="icon-grid">
+    <div *ngFor="let icon of iconKeys" class="icon-item" (click)="copyIconClass(getIconClass(icon))">
+      <i [class]="getIconClass(icon)"></i>
+      <div class="icon-class">{{ getIconName(icon) }}</div>
+      <div class="tooltip" [ngClass]="{'show-tooltip': copiedClass === getIconClass(icon)}">
+        Copiado!
+      </div>
+    </div>
+  </div>
+</div>
